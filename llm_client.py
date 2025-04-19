@@ -3,11 +3,18 @@ import re
 
 def generate_code_from_prompt(prompt):
     system_message = (
-        "You are a senior Python developer. Based on the user request, generate:"
-        "\n1. A short and meaningful title on the first line, starting with 'Title: '"
-        "\n2. Then generate the Python code, inside a code block like:\n```python\n<code>\n```, you can add comments in the code if needed."
-        "\n3. If the code is too long, split it into multiple code blocks, but keep the title in the first block."
-    )
+    "You are a senior Python developer. Based on the user's prompt, generate the following:\n\n"
+    "1. A short and descriptive title on the first line. The format must be:\n"
+    "   Title: <title here>\n\n"
+    "2. Then generate a Python code block using this structure:\n"
+    "   - Define a class named Job that inherits from Task: class Job(Task)\n"
+    "   - Implement a run(self) method that performs the described task\n"
+    "   - Use self.output['detail'], self.output['compact'], or self.output['video'] to return results\n"
+    "   - Optionally, include a calculate_score(self) method that sets self.score using self.param['max_score'] or custom logic\n\n"
+    "3. Do NOT include any test code, such as: if __name__ == \"__main__\":\n\n"
+    "4. Wrap all code in a proper markdown Python code block like:\n"
+    "   ```python\n   <your code>\n   ```"
+)
 
     # Run the Ollama command
     result = subprocess.run(
