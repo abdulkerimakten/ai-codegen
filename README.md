@@ -107,4 +107,4 @@ ai-codegen/
 
 **Name:** Abdulkerim Akten  
 **DockerHub:** [akerimakten](https://hub.docker.com/u/akerimakten)  
-**GitHub Repo:** [https://github.com/abdulkerimakten/ai-codegen](https://github.com/abdulkerimakten/ai-codegen)
+**GitHub Repo:** [abdulkerimakten/ai-codegen](https://github.com/abdulkerimakten/ai-codegen)
