@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Python Code Generator</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"></head>
+
+<body>
+  <h1>AI-Powered Code Generator</h1>
+  <form method="POST">
+    <textarea name="prompt" rows="5" cols="60" placeholder="Describe what you want the code to do..."></textarea><br>
+    <button type="submit">Generate Code</button>
+  </form>
+
+  {% if title %}
+    <h2>Title: {{ title }}</h2>
+    <pre>{{ code }}</pre>
+  {% endif %}
+</body>
+
+</html>

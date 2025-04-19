@@ -1,0 +1,60 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    margin-bottom: 30px;
+  }
+  
+  textarea {
+    width: 60%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    resize: vertical;
+  }
+  
+  button {
+    margin-top: 12px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  pre {
+    background-color: #272822;
+    color: #f8f8f2;
+    padding: 16px;
+    width: 70%;
+    margin: 20px auto;
+    border-radius: 8px;
+    text-align: left;
+    overflow-x: auto;
+    overflow-y: auto;     /* <-- ekle */
+    max-height: 400px;    /* <-- ekle */
+    white-space: pre-wrap; /* uzun satırlar sarılsın */
+  }
+  
+  h2 {
+    color: #222;
+    margin-top: 30px;
+  }
+  

@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-codegen
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ai-codegen
+  template:
+    metadata:
+      labels:
+        app: ai-codegen
+    spec:
+      containers:
+        - name: ai-codegen
+          image: akerimakten/ai-codegen:latest
+          ports:
+            - containerPort: 5000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ai-codegen-service
+spec:
+  selector:
+    app: ai-codegen
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+  type: NodePort
